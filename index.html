@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>SPECTRE: BLACKSITE</title>
+</head>
+<body>
+    <div id="game">
+
+        <!-- Statistics -->
+        <div id="stats">
+            <span class="stat">Valor: <strong><span id="xpText">0</span></strong></span>
+            <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
+            <span class="stat">Credits: <strong><span id="goldText">50</span></strong></span>
+        </div>
+
+        <!-- Game image -->
+        <div id="content">
+            <img id="img" src="forward_base.png" class="center">
+        </div>
+
+        <!-- Buttons -->
+        <div id="controls">
+            <button id="button1">Go to Armory</button>
+            <button id="button2">Go to Bunker</button>
+            <button id="button3">Go to Stronghold</button>
+            <button id="button4">Fight PMC Soldier</button>
+        </div>
+
+        <!-- Enemy information -->
+        <div id="monsterStats">
+            <span class="stat">Enemy Name: <strong><span id="monsterName"></span></strong></span>
+            <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+        </div>
+
+        <!-- Instructions and stuff -->
+        <div id="text">
+          Welcome to SPECTRE: BLACKSITE!
+          You are stationed at your Forward Operating Base.
+          Hostile PMC forces have been detected in the area.
+          Where do you want to go? Use the buttons above.
+        </div>
+
+    </div>
+
+    <!-- sound effects -->
+    <audio id="attackSound" src="attackSound.mp3"></audio>
+    <audio id="damageSound" src="damageSound.mp3"></audio>
+    <audio id="victorySound" src="victorySound.mp3"></audio>
+    <audio id="defeatSound" src="defeatSound.mp3"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
