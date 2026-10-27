@@ -1,0 +1,138 @@
+/* SPECTRE: BLACKSITE | drop-in replacement for your original styles.css */
+:root {
+  color-scheme: dark;
+  --background: #080b0d;
+  --panel: #11181b;
+  --panel-2: #172125;
+  --border: #334340;
+  --text: #e2e8e5;
+  --muted: #9caba6;
+  --green: #a3c3a4;
+  --red: #d16a64;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px 12px 50px;
+  background: radial-gradient(ellipse at 50% -15%, #263733 0%, #10191a 35%, #070a0c 82%);
+  color: var(--text);
+  font: 15px/1.55 Arial, Helvetica, sans-serif;
+}
+
+#game {
+  width: 100%;
+  max-width: 660px;
+  margin: 15px auto;
+  padding: 20px;
+  background: linear-gradient(150deg, #172123, #0d1316 75%);
+  border: 1px solid #435750;
+  border-top: 3px solid #769981;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px #0009, inset 0 0 0 1px #ffffff05;
+}
+
+#gameHeader { text-align: center; margin: 0 0 16px; }
+#gameHeader h1 {
+  margin: 0;
+  font-size: clamp(23px, 5vw, 30px);
+  line-height: 1.2;
+  letter-spacing: .14em;
+  color: #e9f0e9;
+  text-shadow: 0 2px 14px #87c39e20;
+}
+#gameHeader p { margin: 6px 0 0; color: var(--muted); font-size: 10px; letter-spacing: .2em; }
+
+#stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px;
+  background: #0a1012;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+}
+.stat { font-size: 12px; font-weight: bold; letter-spacing: .06em; }
+.stat strong { color: #d7ecd9; font-size: 15px; margin-left: 4px; }
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  width: 100%;
+}
+#content img {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin: 0 auto;
+  border: 1px solid #53665d;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px #0009;
+}
+
+#controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  padding: 11px 0 14px;
+}
+button {
+  min-height: 46px;
+  padding: 11px 9px;
+  cursor: pointer;
+  color: #e2eee3;
+  background: linear-gradient(180deg, #283b34, #1a2b28);
+  border: 1px solid #5a7865;
+  border-radius: 4px;
+  font: 700 12px/1.2 Arial, Helvetica, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+button:hover { background: #354e40; border-color: #a1c2a3; transform: translateY(-1px); }
+button:active { transform: translateY(1px); }
+button:focus-visible { outline: 2px solid #c1dfc2; outline-offset: 2px; }
+button:disabled { cursor: not-allowed; opacity: .45; transform: none; }
+
+#monsterStats {
+  display: none; /* Existing app.js can show it during combat */
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  color: #f3d4d2;
+  background: #311b1d;
+  border: 1px solid #92514d;
+  border-left: 4px solid var(--red);
+  border-radius: 3px;
+}
+#monsterStats .stat strong { color: #ffb5ae; }
+
+#text {
+  background: #0b1113;
+  color: #bac8c3;
+  padding: 16px;
+  border: 1px solid #32453f;
+  border-left: 3px solid #829d85;
+  border-radius: 4px;
+  min-height: 76px;
+  line-height: 1.65;
+}
+#text strong { color: #d7e9d8; }
+#text p { margin: 0 0 10px; }
+#text p:last-child { margin-bottom: 0; }
+
+@media (max-width: 420px) {
+  body { padding: 10px 8px 30px; }
+  #game { padding: 12px; }
+  #stats { gap: 6px; }
+  .stat { font-size: 10px; }
+  .stat strong { font-size: 13px; }
+  button { font-size: 11px; min-height: 48px; }
+}
