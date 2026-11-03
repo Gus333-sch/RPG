@@ -136,3 +136,27 @@ button:disabled { cursor: not-allowed; opacity: .45; transform: none; }
   .stat strong { font-size: 13px; }
   button { font-size: 11px; min-height: 48px; }
 }
+
+
+/* Six-button tactical layout */
+
+#controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 12px;
+}
+
+#controls button {
+    min-height: 48px;
+    padding: 10px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+    #controls {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
