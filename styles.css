@@ -82,7 +82,7 @@ body {
     width: 100%;
     max-width: 512px;
     height: auto;
-    max-height: 45vh;
+    max-height: 60vh;
     object-fit: contain;
     object-position: center;
     margin: auto;
