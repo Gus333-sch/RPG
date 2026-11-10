@@ -71,7 +71,7 @@ body {
     background: #0c1210;
     border: 1px solid #34483b;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* IMAGE FIX: NO CROPPING */
