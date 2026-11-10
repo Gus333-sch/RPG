@@ -87,7 +87,7 @@
    },
    {
      name: "PMC Raider",
-     picture: "pmc_mercenary_alt.png",
+     picture: "pmc_mercenary.png",
      health: 85,
      damage: 11,
      xp: 15,
